@@ -11,13 +11,15 @@ import ru.innopolis.common.Money;
 public class CurrencyConverterImpl implements CurrencyConverter {
     @Override
     public double convert(double sum) {
-        return sum*60;
+        System.out.println("convert");
+        return sum*75;
     }
 
     @Override
     public Money convertMoney(Money money) {
+        System.out.println("convertMoney");
         money.setCurrencyName("USD");
-        money.setSum(money.getSum()*60);
+        money.setSum(money.getSum()*75);
         return money;
     }
 }
